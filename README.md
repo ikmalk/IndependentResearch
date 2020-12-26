@@ -1,2 +1,2 @@
 # IndependentResearch
-Code for my independent research course
+Code and output for my independent research course
