@@ -37,8 +37,8 @@ public class Sanitize {
 		ArrayList<String> type = new ArrayList<>();
 		
 		try {
-			FileWriter typeFile = new FileWriter("Type.csv", true);
-			FileWriter flairFile = new FileWriter("Flair.csv", true);
+			FileWriter typeFile = new FileWriter("Flair&Type/Type.csv", true);
+			FileWriter flairFile = new FileWriter("Flair&Type/Flair.csv", true);
 			for(int i = 0;i<name.length;i++) {
 			
 				String fileName = "data/"+name[i]+"_week_";
@@ -56,8 +56,6 @@ public class Sanitize {
 					while(s != null) {
 						
 						String[] split = s.split(",");
-	//					flair.add(split[2]);
-	//					type.add(split[3]);
 						flair = add(flair, split[2]);
 						type = add(type, split[3]);
 						s = scanner.readLine();
