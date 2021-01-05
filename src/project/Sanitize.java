@@ -6,6 +6,13 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+
+	This class is to extract all the flair and type in the raw data file
+	so that the data can be categorized and classified.
+
+*/
+
 public class Sanitize {
 
 	public static void main(String[] args) {
@@ -34,7 +41,7 @@ public class Sanitize {
 			FileWriter flairFile = new FileWriter("Flair.csv", true);
 			for(int i = 0;i<name.length;i++) {
 			
-				String fileName = name[i]+"_week_";
+				String fileName = "data/"+name[i]+"_week_";
 				int week = 6;
 				
 				flair.add(name[i]);
@@ -85,6 +92,9 @@ public class Sanitize {
 		return str;
 	}
 	
+	/*
+	To prevent duplicate
+	*/
 	public static ArrayList<String> add(ArrayList<String> arr, String s){
 		if(!arr.contains(s)) {
 			arr.add(s);
